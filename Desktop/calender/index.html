@@ -1,0 +1,821 @@
+<
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calender 2021</title>
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+            <div id="pop_up">
+              <div class="events">
+                
+                    <div>
+                      <label>Add Events</label>
+                      <input id="text" type="text" ><button id="add" class="btn btn-primary" onclick="add()">Add</button>
+                    </div>
+                    
+                   
+                    <div>
+                      <label>Todays Events</label>
+                      <div id="det" >
+
+                      </div>
+                    </div>
+                    <div class="cancel">
+                    
+                    <button id="cancel" class="btn btn-primary">Cancel</button>
+                </div>
+                  
+              </div>  
+            </div>
+            <div class="calender">
+       <div class="year">
+           <div id="jan">
+               <div class="january">
+                <div class="month"><i id="leftjan" class="fas fa-chevron-left" onclick="leftjan()"></i>JANUARY<i id="rightjan"   class="fas fa-chevron-right" onclick="rightjan()"></i></div>
+                <div class="_2021">2021</i></div>
+            
+           </div>
+           <div class="dates">
+               <div class="row0">
+                <div class="grid">SUN</div>
+                <div class="grid">MON</div>
+                <div class="grid">TUE</div>  
+                <div class="grid">WED</div>
+                <div class="grid">THU</div>
+                <div class="grid">FRI</div>  
+                <div class="grid">SAT</div>  
+               </div>
+            <div class="row1">
+                <div class="grid-item">31</div>
+                <div class="grid-item-blank"></div>
+                <div class="grid-item-blank"></div>  
+                <div class="grid-item-blank"></div>
+                <div class="grid-item-blank"></div>
+                <div class="grid-item">1</div>  
+                <div class="grid-item">2</div>
+            </div>
+                
+            <div class="row2">
+                <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>  
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>  
+            <div class="grid-item">9</div>
+            </div>
+            <div class="row3">
+                <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>  
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>  
+            <div class="grid-item">16</div>
+            </div>
+            <div class="row4">
+                <div class="grid-item">17</div>
+            <div class="grid-item">18</div>
+            <div class="grid-item">19</div>  
+            <div class="grid-item">20</div>
+            <div class="grid-item">21</div>
+            <div class="grid-item">22</div>  
+            <div class="grid-item">23</div>
+            </div>
+            <div class="row5">
+                <div class="grid-item">24</div>
+            <div class="grid-item">25</div>
+            <div class="grid-item">26</div>  
+            <div class="grid-item">27</div>
+            <div class="grid-item">28</div>
+            <div class="grid-item">29</div>  
+            <div class="grid-item">30</div>
+            </div>
+            </div>
+            </div>
+            <div id="feb">
+            <div class="February">
+                <div id="month"><i id="leftfeb" class="fas fa-chevron-left" onclick="leftfeb()"></i>FEBRUARY<i id="rightfeb" class="fas fa-chevron-right" onclick="rightfeb()"></i></div>
+                <div id="_2021">2021</i></div>
+           </div>
+           <div class="dates">
+               <div class="row0">
+                <div class="grid">SUN</div>
+                <div class="grid">MON</div>
+                <div class="grid">TUE</div>  
+                <div class="grid">WED</div>
+                <div class="grid">THU</div>
+                <div class="grid">FRI</div>  
+                <div class="grid">SAT</div>  
+               </div>
+            <div class="row1">
+                <div class="grid-item-blank"></div>
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>  
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>  
+                <div class="grid-item">6</div>
+            </div>
+                
+            <div class="row2">
+                <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>  
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>  
+            <div class="grid-item">13</div>
+            </div>
+            <div class="row3">
+                <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+            <div class="grid-item">16</div>  
+            <div class="grid-item">17</div>
+            <div class="grid-item">18</div>
+            <div class="grid-item">19</div>  
+            <div class="grid-item">20</div>
+            </div>
+            <div class="row4">
+                <div class="grid-item">21</div>
+            <div class="grid-item">22</div>
+            <div class="grid-item">23</div>  
+            <div class="grid-item">24</div>
+            <div class="grid-item">25</div>
+            <div class="grid-item">26</div>  
+            <div class="grid-item">27</div>
+            </div>
+            <div class="row5">
+                <div class="grid-item">28</div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item-blank"></div>  
+            <div class="grid-item-blank"></div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item-blank"></div>  
+            <div class="grid-item-blank"></div>
+            </div>
+
+          </div>
+          </div>
+          <div id="mar">
+            <div class="march">
+             <div class="month"><i id="leftmar"  class="fas fa-chevron-left" onclick="leftmar()"></i>MARCH<i id="rightmar"   class="fas fa-chevron-right" onclick="rightmar()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item-blank"></div>
+             <div class="grid-item">1</div>
+             <div class="grid-item">2</div>  
+             <div class="grid-item">3</div>
+             <div class="grid-item">4</div>
+             <div class="grid-item">5</div>  
+             <div class="grid-item">6</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">7</div>
+         <div class="grid-item">8</div>
+         <div class="grid-item">9</div>  
+         <div class="grid-item">10</div>
+         <div class="grid-item">11</div>
+         <div class="grid-item">12</div>  
+         <div class="grid-item">13</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">14</div>
+         <div class="grid-item">15</div>
+         <div class="grid-item">16</div>  
+         <div class="grid-item">17</div>
+         <div class="grid-item">18</div>
+         <div class="grid-item">19</div>  
+         <div class="grid-item">20</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">21</div>
+         <div class="grid-item">22</div>
+         <div class="grid-item">23</div>  
+         <div class="grid-item">24</div>
+         <div class="grid-item">25</div>
+         <div class="grid-item">26</div>  
+         <div class="grid-item">27</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">28</div>
+         <div class="grid-item">29</div>
+         <div class="grid-item">30</div>  
+         <div class="grid-item">31</div>
+         <div class="grid-item-blank"></div>
+         <div class="grid-item-blank"></div>  
+         <div class="grid-item-blank"></div>
+         </div>
+         </div>
+         </div>
+         <div id="apr">
+            <div class="april">
+             <div class="month"><i id="leftapr" class="fas fa-chevron-left" onclick="leftapr()"></i>APRIL<i id="rightapr"   class="fas fa-chevron-right" onclick="rightapr()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>  
+             <div class="grid-item-blank"></div>
+             <div class="grid-item">1</div>
+             <div class="grid-item">2</div>  
+             <div class="grid-item">3</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">4</div>
+         <div class="grid-item">5</div>
+         <div class="grid-item">6</div>  
+         <div class="grid-item">7</div>
+         <div class="grid-item">8</div>
+         <div class="grid-item">9</div>  
+         <div class="grid-item">10</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">11</div>
+         <div class="grid-item">12</div>
+         <div class="grid-item">13</div>  
+         <div class="grid-item">14</div>
+         <div class="grid-item">15</div>
+         <div class="grid-item">16</div>  
+         <div class="grid-item">17</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">18</div>
+         <div class="grid-item">19</div>
+         <div class="grid-item">20</div>  
+         <div class="grid-item">21</div>
+         <div class="grid-item">22</div>
+         <div class="grid-item">23</div>  
+         <div class="grid-item">24</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">25</div>
+         <div class="grid-item">26</div>
+         <div class="grid-item">27</div>  
+         <div class="grid-item">28</div>
+         <div class="grid-item">29</div>
+         <div class="grid-item">30</div>  
+         <div class="grid-item-blank"></div>
+         </div>
+         </div>
+         </div>
+         <div id="mai">
+            <div class="may">
+             <div class="month"><i id="leftmai" class="fas fa-chevron-left" onclick="leftmai()"></i>MAY<i id="rightmai"   class="fas fa-chevron-right" onclick="rightmai()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item">30</div>
+             <div class="grid-item">31</div>
+             <div class="grid-item-blank"></div>  
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>  
+             <div class="grid-item">1</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">2</div>
+         <div class="grid-item">3</div>
+         <div class="grid-item">4</div>  
+         <div class="grid-item">5</div>
+         <div class="grid-item">6</div>
+         <div class="grid-item">7</div>  
+         <div class="grid-item">8</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">9</div>
+         <div class="grid-item">10</div>
+         <div class="grid-item">11</div>  
+         <div class="grid-item">12</div>
+         <div class="grid-item">13</div>
+         <div class="grid-item">14</div>  
+         <div class="grid-item">15</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">16</div>
+         <div class="grid-item">17</div>
+         <div class="grid-item">18</div>  
+         <div class="grid-item">19</div>
+         <div class="grid-item">20</div>
+         <div class="grid-item">21</div>  
+         <div class="grid-item">22</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">23</div>
+         <div class="grid-item">24</div>
+         <div class="grid-item">25</div>  
+         <div class="grid-item">26</div>
+         <div class="grid-item">27</div>
+         <div class="grid-item">28</div>  
+         <div class="grid-item">29</div>
+         </div>
+         </div>
+         </div>
+         <div id="jun">
+            <div class="june">
+             <div class="month"><i id="leftjun" class="fas fa-chevron-left" onclick="leftjun()"></i>JUNE<i id="rightjun"   class="fas fa-chevron-right" onclick="rightjun()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item">1</div>  
+             <div class="grid-item">2</div>
+             <div class="grid-item">3</div>
+             <div class="grid-item">4</div>  
+             <div class="grid-item">5</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">6</div>
+         <div class="grid-item">7</div>
+         <div class="grid-item">8</div>  
+         <div class="grid-item">9</div>
+         <div class="grid-item">10</div>
+         <div class="grid-item">11</div>  
+         <div class="grid-item">12</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">13</div>
+         <div class="grid-item">14</div>
+         <div class="grid-item">15</div>  
+         <div class="grid-item">16</div>
+         <div class="grid-item">17</div>
+         <div class="grid-item">18</div>  
+         <div class="grid-item">19</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">20</div>
+         <div class="grid-item">21</div>
+         <div class="grid-item">22</div>  
+         <div class="grid-item">23</div>
+         <div class="grid-item">24</div>
+         <div class="grid-item">25</div>  
+         <div class="grid-item">26</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">27</div>
+         <div class="grid-item">28</div>
+         <div class="grid-item">29</div>  
+         <div class="grid-item">30</div>
+         <div class="grid-item-blank"></div>
+         <div class="grid-item-blank"></div>  
+         <div class="grid-item-blank"></div>
+         </div>
+         </div>
+         </div>
+         <div id="jul">
+            <div class="july">
+             <div class="month"><i id="leftjul" class="fas fa-chevron-left" onclick="leftjul()"></i>JULY<i id="rightjul"   class="fas fa-chevron-right" onclick="rightjul()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>  
+             <div class="grid-item-blank"></div>
+             <div class="grid-item">1</div>
+             <div class="grid-item">2</div>  
+             <div class="grid-item">3</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">4</div>
+         <div class="grid-item">5</div>
+         <div class="grid-item">6</div>  
+         <div class="grid-item">7</div>
+         <div class="grid-item">8</div>
+         <div class="grid-item">9</div>  
+         <div class="grid-item">10</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">11</div>
+         <div class="grid-item">12</div>
+         <div class="grid-item">13</div>  
+         <div class="grid-item">14</div>
+         <div class="grid-item">15</div>
+         <div class="grid-item">16</div>  
+         <div class="grid-item">17</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">18</div>
+         <div class="grid-item">19</div>
+         <div class="grid-item">20</div>  
+         <div class="grid-item">21</div>
+         <div class="grid-item">22</div>
+         <div class="grid-item">23</div>  
+         <div class="grid-item">24</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">25</div>
+         <div class="grid-item">26</div>
+         <div class="grid-item">27</div>  
+         <div class="grid-item">28</div>
+         <div class="grid-item">29</div>
+         <div class="grid-item">30</div>  
+         <div class="grid-item">31</div>
+         </div>
+         </div>
+         </div>
+        
+         <div id="aug">
+            <div class="august">
+             <div class="month"><i id="leftaug" class="fas fa-chevron-left" onclick="leftaug()"></i>AUGUST<i id="rightaug"   class="fas fa-chevron-right" onclick="rightaug()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item">1</div>
+             <div class="grid-item">2</div>
+             <div class="grid-item">3</div>  
+             <div class="grid-item">4</div>
+             <div class="grid-item">5</div>
+             <div class="grid-item">6</div>  
+             <div class="grid-item">7</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">8</div>
+         <div class="grid-item">9</div>
+         <div class="grid-item">10</div>  
+         <div class="grid-item">11</div>
+         <div class="grid-item">12</div>
+         <div class="grid-item">13</div>  
+         <div class="grid-item">14</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">15</div>
+         <div class="grid-item">16</div>
+         <div class="grid-item">17</div>  
+         <div class="grid-item">18</div>
+         <div class="grid-item">19</div>
+         <div class="grid-item">20</div>  
+         <div class="grid-item">21</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">22</div>
+         <div class="grid-item">23</div>
+         <div class="grid-item">24</div>  
+         <div class="grid-item">25</div>
+         <div class="grid-item">26</div>
+         <div class="grid-item">27</div>  
+         <div class="grid-item">28</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">29</div>
+         <div class="grid-item">30</div>
+         <div class="grid-item-blank"></div>  
+         <div class="grid-item-blank"></div>
+         <div class="grid-item-blank"></div>
+         <div class="grid-item-blank"></div>  
+         <div class="grid-item-blank"></div>
+         </div>
+         </div>
+         </div>
+         <div id="sep">
+            <div class="september">
+             <div class="month"><i id="leftsep" class="fas fa-chevron-left" onclick="leftsep()"></i>SEPTEMBER<i id="rightsep"   class="fas fa-chevron-right" onclick="rightsep()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>  
+             <div class="grid-item">1</div>
+             <div class="grid-item">2</div>
+             <div class="grid-item">3</div>  
+             <div class="grid-item">4</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">5</div>
+         <div class="grid-item">6</div>
+         <div class="grid-item">7</div>  
+         <div class="grid-item">8</div>
+         <div class="grid-item">9</div>
+         <div class="grid-item">10</div>  
+         <div class="grid-item">11</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">12</div>
+         <div class="grid-item">13</div>
+         <div class="grid-item">14</div>  
+         <div class="grid-item">15</div>
+         <div class="grid-item">16</div>
+         <div class="grid-item">17</div>  
+         <div class="grid-item">18</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">19</div>
+         <div class="grid-item">20</div>
+         <div class="grid-item">21</div>  
+         <div class="grid-item">22</div>
+         <div class="grid-item">23</div>
+         <div class="grid-item">24</div>  
+         <div class="grid-item">25</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">26</div>
+         <div class="grid-item">27</div>
+         <div class="grid-item">28</div>  
+         <div class="grid-item">29</div>
+         <div class="grid-item">30</div>
+         <div class="grid-item-blank"></div>  
+         <div class="grid-item-blank"></div>
+         </div>
+         </div>
+         </div>
+         <div id="oct">
+            <div class="october">
+             <div class="month"><i id="leftoct" class="fas fa-chevron-left" onclick="leftoct()"></i>OCTOBER<i id="rightoct"   class="fas fa-chevron-right" onclick="rightoct()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item">31</div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>  
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item">1</div>  
+             <div class="grid-item">2</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">3</div>
+         <div class="grid-item">4</div>
+         <div class="grid-item">5</div>  
+         <div class="grid-item">6</div>
+         <div class="grid-item">7</div>
+         <div class="grid-item">8</div>  
+         <div class="grid-item">9</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">10</div>
+         <div class="grid-item">11</div>
+         <div class="grid-item">12</div>  
+         <div class="grid-item">13</div>
+         <div class="grid-item">14</div>
+         <div class="grid-item">15</div>  
+         <div class="grid-item">16</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">17</div>
+         <div class="grid-item">18</div>
+         <div class="grid-item">19</div>  
+         <div class="grid-item">20</div>
+         <div class="grid-item">21</div>
+         <div class="grid-item">22</div>  
+         <div class="grid-item">23</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">24</div>
+         <div class="grid-item">25</div>
+         <div class="grid-item">26</div>  
+         <div class="grid-item">27</div>
+         <div class="grid-item">28</div>
+         <div class="grid-item">29</div>  
+         <div class="grid-item">30</div>
+         </div>
+         </div>
+         </div>
+         <div id="nov">
+            <div class="november">
+             <div class="month"><i id="leftnov" class="fas fa-chevron-left" onclick="leftnov()"></i>NOVEMBER<i id="rightnov"   class="fas fa-chevron-right" onclick="rightnov()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item-blank"></div>
+             <div class="grid-item">1</div>
+             <div class="grid-item">2</div>  
+             <div class="grid-item">3</div>
+             <div class="grid-item">4</div>
+             <div class="grid-item">5</div>  
+             <div class="grid-item">6</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">7</div>
+         <div class="grid-item">8</div>
+         <div class="grid-item">9</div>  
+         <div class="grid-item">10</div>
+         <div class="grid-item">11</div>
+         <div class="grid-item">12</div>  
+         <div class="grid-item">13</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">14</div>
+         <div class="grid-item">15</div>
+         <div class="grid-item">16</div>  
+         <div class="grid-item">17</div>
+         <div class="grid-item">18</div>
+         <div class="grid-item">19</div>  
+         <div class="grid-item">20</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">21</div>
+         <div class="grid-item">22</div>
+         <div class="grid-item">23</div>  
+         <div class="grid-item">24</div>
+         <div class="grid-item">25</div>
+         <div class="grid-item">26</div>  
+         <div class="grid-item">27</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">28</div>
+         <div class="grid-item">29</div>
+         <div class="grid-item">30</div>  
+         <div class="grid-item-blank"></div>
+         <div class="grid-item-blank"></div>
+         <div class="grid-item-blank"></div>  
+         <div class="grid-item-blank"></div>
+         </div>
+         </div>
+         </div>
+         <div id="dec">
+            <div class="december">
+             <div class="month"><i id="leftdec" class="fas fa-chevron-left" onclick="leftdec()"></i>DECEMBER<i id="rightdec"   class="fas fa-chevron-right" onclick="rightdec()"></i></div>
+             <div class="_2021">2021</i></div>
+         
+        </div>
+        <div class="dates">
+            <div class="row0">
+             <div class="grid">SUN</div>
+             <div class="grid">MON</div>
+             <div class="grid">TUE</div>  
+             <div class="grid">WED</div>
+             <div class="grid">THU</div>
+             <div class="grid">FRI</div>  
+             <div class="grid">SAT</div>  
+            </div>
+         <div class="row1">
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>
+             <div class="grid-item-blank"></div>  
+             <div class="grid-item">1</div>
+             <div class="grid-item">2</div>
+             <div class="grid-item">3</div>  
+             <div class="grid-item">4</div>
+         </div>
+             
+         <div class="row2">
+             <div class="grid-item">5</div>
+         <div class="grid-item">6</div>
+         <div class="grid-item">7</div>  
+         <div class="grid-item">8</div>
+         <div class="grid-item">9</div>
+         <div class="grid-item">10</div>  
+         <div class="grid-item">11</div>
+         </div>
+         <div class="row3">
+             <div class="grid-item">12</div>
+         <div class="grid-item">13</div>
+         <div class="grid-item">14</div>  
+         <div class="grid-item">15</div>
+         <div class="grid-item">16</div>
+         <div class="grid-item">17</div>  
+         <div class="grid-item">18</div>
+         </div>
+         <div class="row4">
+             <div class="grid-item">19</div>
+         <div class="grid-item">20</div>
+         <div class="grid-item">21</div>  
+         <div class="grid-item">22</div>
+         <div class="grid-item">23</div>
+         <div class="grid-item">24</div>  
+         <div class="grid-item">25</div>
+         </div>
+         <div class="row5">
+             <div class="grid-item">26</div>
+         <div class="grid-item">27</div>
+         <div class="grid-item">28</div>  
+         <div class="grid-item">29</div>
+         <div class="grid-item">30</div>
+         <div class="grid-item">31</div>  
+         <div class="grid-item-blank"></div>
+         </div>
+         </div>
+         </div>
+        
+        
+    </div>
+    </div>
+    </div>    
+     </div>      
+      
+    <script src="assets/js/index.js"></script>
+    </body>
+</html>
