@@ -1,126 +1,135 @@
-body{
-    padding: 0;
-    margin: 0;
-    background-color:rgb(18, 209, 216);
-    display: flex;
-    justify-content: center;
-}
-#pop_up{
-    height: 100vh;
+#modal_popup{
     width: 100vw;
-    background-color: transparent;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    z-index: 2;
-    margin: 10% 20%;
-    display: none;
-    
-
-}
-#det{
-    height: 200px;
-    
-}
-.cancel{
-    display: flex;
-    justify-content: center;
-}
-#text{
-    width: 400px;
-    border-radius: 5px;
-    margin: 2px;
-}
-.events{
-    width: 50vw;
-    height: 60vh;
-    background-color: #fff;
-   padding: 20px;
-    
-}
-.year{
-    position: relative;
-    
-    
-}
-.calender{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.january,.february,.march,.april,.may,.june,.july,.august,.september,.october,.november,.december{
-    height: 100px;
-    width: 60vw;
-    background-color:rgb(34, 168, 221) ;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-}
-#feb,#mar,#apr,#mai,#jun,#jul,#aug,#sep,#oct,#nov,#dec{
-   
-    left: 0;
     top: 0;
+    left: 0;
+    z-index: 2;
     display: none;
 
 }
-.fa-chevron-right {
-    cursor: pointer;
-}
-.month{
-    margin: 20px;
-}
-._2021{
-    margin: 20px;
-}
-.fa-chevron-left,.fa-chevron-right{
-    margin: 20px;
-    font-size: 30px;
-}
-.dates{
-    width: 60vw;
-    background-color:#a9c8e0;
-    padding: 10px;
+#contain{
+    width: 400px;
+    height: 200px;
+    margin-left: 40%;
+    margin-top: 20%;
     
-    border-radius: .1px black solid;
+    background-color: #fff;
 }
-.grid-item{
-    height: 100px;
-    width: 100px;
-    border: 1px solid #000;
-    color: #000;
-    cursor: pointer;
+#calendar{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 60px;
 }
-.grid-item-blank{
-    height: 100px;
-    width: 100px;
-    border: 1px solid #000;
-    color: #000;
+.calendarTable{
     
+    border: 1px solid #fff;
+    position: fixed;
+    left: 280px;
 
 }
-
-.grid{
-    height: 30px;
+.calendarTable thead th{
     width: 100px;
-    border: 1px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    font-size: 20px;
     font-weight: bold;
-    color: #000;
+    text-align: center;
 }
-.row0{
+.calendarTable tbody tr{
+    width: 100px;
+    height: 50px;
+    border: 1px solid #fff;
+    background-color: #fff;;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
-.row1,.row2,.row3,.row4,.row5{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.calendarTable tbody td{
+    width: 100px;
+    height: 80px;
+    border: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.calendarbtns{
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+}
+.calendarbtns span{
+    padding: 6px 12px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+}
+.calendarDiv{
+    display: none;
+}
+#calendarTable_1{
+    display: block;
+}
+#allItems{
+display: flex;
+justify-content: space-around;
+}
+.allMonths{
+    background-color: #216583;
+    width: 200px;
+    position: fixed;
+    left: 0;
+}
+.allMonths{
+    display: none;
+}
+#months_1{
+    display: block;
+}
+.mont{
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    padding:  4% 10%;
+    cursor: pointer;
+}
+.mont:hover{
+    background-color: #194355;
+    width: 80%;
+}
+.allEvents{
+    width: 300px;
+    height: 600px;
+    
+    right: 0;
+    position: fixed;
+    transform: translateX();
+    background-color: #216583;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3px;
+    display: none;
+    
+    
+}
+#td_1,#td_26,#td_31{
+    background-color:#216583; ;
 }
 
-
-
+#eve_1:after{
+    content: "Lunch @2pm in Taj";
+    padding-top:4px ;
+}
+#eve_26:after{
+    content: "BirthDay Party";
+    padding-top:4px ;
+}
+#eve_31:after{
+    content: "conference meeting";
+    padding-top:4px ;
+}
