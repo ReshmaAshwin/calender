@@ -17,9 +17,10 @@ window.onload=function deep(){
       
       
      
-  
+      document.getElementById("modal_popup").style.display="block";
     document.getElementById("events_"+i).style.display="block";
     }
+    
     }
 }
 
@@ -73,10 +74,10 @@ for(let i=0;i<dates.length;i++){
   content += "<div id='allItems'>";
   content += "<div id='modal_popup'>";
   content += "<div id='contain'>";
-  content += "<label>Add Event</label>";
-  content += "<input id='input' type='text'>";
-  content += "<div id='description'></div>"
-  content += "<button id='add' onclick='save()'>Save</button>"
+  content += "<div id='title'>Add Event</div>";
+  
+  content += "<div id='description'><input id='input' type='text' placeholder='Enter New Event'></div>"
+  content += "<div id='btn'><span><button id='add' onclick='save()'>Save</button></span><span><button id='cancel' onclick='cancel()'>Cancel</span></div>"
   content += "</div>";
   content += "</div>";
   
@@ -141,6 +142,7 @@ for(let i=0;i<dates.length;i++){
           
           j++;
           content  += "<div id='events_"+demo+"' class='allEvents'>Todays Events<div id='eve_"+demo+"'</div></div>";
+          
           demo++;
           
           
@@ -574,7 +576,12 @@ function dec(){
   }
 
 }
-
+function save(){
+  document.getElementById("modal_popup").style.display="none";
+}
+function cancel(){
+  document.getElementById("modal_popup").style.display="none";
+}
 
 let content = getDatesBetween("2022/01/01","2030/01/01");
 document.getElementById("calendar").innerHTML=content;
