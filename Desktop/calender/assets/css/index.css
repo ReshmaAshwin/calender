@@ -1,171 +1,205 @@
-#modal_popup{
+body {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 20px;
+  justify-content: start;
+  background-size: 100vw 100vh;
+  background-image: url("../images/bg.jpg");
+  
+}
+
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+#header {
+  padding: 10px;
+  color: #cb9b51;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+#header button {
+  background-color:#247BA0;
+  
+}
+#container {
+  width: 57%;
+  position: relative;
+  height: 86.5vh;
+  background: transparent;
+  margin: 1% 1%;
+  transition: 0.5s;
+  border: 1px solid #462523;
+  box-shadow: 0px 0px 12px #f0e112;
+
+}
+#container:hover {
+ transform: translateY(-20px);
+
+}
+
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: #f6e27a;
+}
+#weekdays div {
+  width: 12%;
+  padding: 1%;
+  
+}
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.day {
+  width: 12%;
+  padding: 1%;
+  height: 10vh;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin: 1%;
+  color: #f0e112;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s;
+  border: 1px solid #462523;
+  box-shadow: 0px 0px 5px #cb9b51;
+}
+.day:hover {
+  transform: translateY(-20px);
+  background-image: linear-gradient(
+    to right,
+    #462523 0,
+    #cb9b51 22%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%);
+}
+
+.day + #currentDay {
+  background-color:#462523;
+  color: #fff;
+}
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #cb9b51;
+
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+.padding {
+  cursor: default !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #cb9b51;
+  box-shadow: 0px 0px 3px #462523;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#cancelButton, #deleteButton {
+  background-color: #462523;
+}
+#saveButton, #closeButton {
+  background-color: #462523;
+}
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+@media  only screen and (max-width:600px) {
+  
+  #container{
     width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    display: none;
-
-}
-#contain{
-    width: 400px;
-    height: 200px;
-    margin-left: 35%;
-    margin-top: 15%;
-    border-radius: 10px 10px;
-    background-color: #fff;
-}
-#calendar{
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 60px;
-}
-.calendarTable{
+    margin: 5% 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
     
-    border: 1px solid #fff;
-    position: fixed;
-    left: 280px;
-
-}
-.calendarTable thead th{
-    width: 100px;
-    height: 50px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-.calendarTable tbody tr{
-    width: 100px;
-    height: 50px;
-    border: 1px solid #fff;
-    background-color: #fff;;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+  }
+  #days{
+    height: 8vh;
+  }
+  #header button {
+    font-size: x-small;
     
     
+  }
 }
-.calendarTable tbody td{
-    width: 100px;
-    height: 80px;
-    border: 1px solid #fff;
-    text-align: center;
-    cursor: pointer;
+@media  only screen and (min-width:601px) and (max-width:900px) {
+  
+  #container{
+    width: 60vw;
+    margin: 1% 1%;
+    height: 95vh;
     
-}
-.calendarbtns{
-    padding: 10px 0;
-    width: 100%;
-    font-size: 20px;
-}
-.calendarbtns span{
-    padding: 6px 12px;
-    font-size: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #fff;
-}
-.calendarDiv{
-    display: none;
-}
-#calendarTable_1{
-    display: block;
-}
-#allItems{
-display: flex;
-justify-content: space-around;
-}
-.allMonths{
-    background-color: #216583;
-    width: 200px;
-    position: fixed;
-    left: 0;
-}
-.allMonths{
-    display: none;
-}
-#months_1{
-    display: block;
-}
-.mont{
-    font-size: 20px;
-    color: #fff;
-    width: 100%;
-    padding:  4% 10%;
-    cursor: pointer;
-}
-.mont:hover{
-    background-color: #194355;
-    width: 80%;
-}
-.allEvents{
-    width: 300px;
-    height: 600px;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+   
+  }
+  
+  #header button {
+    font-size: x-small;
     
-    right: 0;
-    position: fixed;
-    transform: translateX();
-    background-color: #216583;
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 3px;
-    display: none;
-    
-    
-}
-#td_1,#td_26,#td_31{
-    background-color:#216583;
-    color: #fff ;
-}
-
-#eve_1:after{
-    content: "Lunch @2pm in Taj";
-    padding-top:4px ;
-}
-#eve_26:after{
-    content: "BirthDay Party";
-    padding-top:4px ;
-}
-#eve_31:after{
-    content: "conference meeting";
-    padding-top:4px ;
-}
-#allDesc{
-    margin-top: 500px;
-}
-#description{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-input{
-    width: 350px;
-    height: 25px;
-}
-#btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-}
-#title{
-    background-color: #216583;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    height: 30px;
-    border: 1px solid #fff;
-    border-radius: 10px 10px;
-}
-button{
-    margin: 12px;
-}
-#add,#cancel{
-    margin: 2px;
+  } 
+    .event {
+      font-size: 8px; }
 }
